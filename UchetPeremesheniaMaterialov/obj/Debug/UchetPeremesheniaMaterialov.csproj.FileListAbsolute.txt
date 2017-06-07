@@ -1,0 +1,24 @@
+c:\users\evgeniel\documents\visual studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\bin\Debug\UchetPeremesheniaMaterialov.exe.config
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\bin\Debug\UchetPeremesheniaMaterialov.exe
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\bin\Debug\UchetPeremesheniaMaterialov.pdb
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\bin\Debug\EntityFramework.dll
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\bin\Debug\System.Data.SQLite.dll
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\bin\Debug\EntityFramework.xml
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\bin\Debug\System.Data.SQLite.xml
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\obj\Debug\UchetPeremesheniaMaterialov.csprojResolveAssemblyReference.cache
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\obj\Debug\UchetPeremesheniaMaterialov.UchetMaterialov.resources
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\obj\Debug\UchetPeremesheniaMaterialov.planSchetov.resources
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\obj\Debug\UchetPeremesheniaMaterialov.Properties.Resources.resources
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\obj\Debug\UchetPeremesheniaMaterialov.csproj.GenerateResource.Cache
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\obj\Debug\UchetPeremesheniaMaterialov.exe
+C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\obj\Debug\UchetPeremesheniaMaterialov.pdb
+C:\Users\EvgenieL\Desktop\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\bin\Debug\UchetPeremesheniaMaterialov.exe.config
+C:\Users\EvgenieL\Desktop\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\obj\Debug\UchetPeremesheniaMaterialov.exe
+C:\Users\EvgenieL\Desktop\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\obj\Debug\UchetPeremesheniaMaterialov.pdb
+C:\Users\EvgenieL\Source\Repos\AccountingMovementMaterials\UchetPeremesheniaMaterialov\bin\Debug\UchetPeremesheniaMaterialov.exe.config
+C:\Users\EvgenieL\Source\Repos\AccountingMovementMaterials\UchetPeremesheniaMaterialov\obj\Debug\UchetPeremesheniaMaterialov.exe
+C:\Users\EvgenieL\Source\Repos\AccountingMovementMaterials\UchetPeremesheniaMaterialov\obj\Debug\UchetPeremesheniaMaterialov.pdb
