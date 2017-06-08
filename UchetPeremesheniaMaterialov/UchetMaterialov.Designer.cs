@@ -67,12 +67,14 @@
             this.мToolStripMenuItem.Name = "мToolStripMenuItem";
             this.мToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.мToolStripMenuItem.Text = "Материалы";
+            this.мToolStripMenuItem.Click += new System.EventHandler(this.мToolStripMenuItem_Click);
             // 
             // мОЛToolStripMenuItem
             // 
             this.мОЛToolStripMenuItem.Name = "мОЛToolStripMenuItem";
             this.мОЛToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.мОЛToolStripMenuItem.Text = "МОЛ";
+            this.мОЛToolStripMenuItem.Click += new System.EventHandler(this.мОЛToolStripMenuItem_Click);
             // 
             // планСчетовToolStripMenuItem
             // 
@@ -86,12 +88,14 @@
             this.подразделениеToolStripMenuItem.Name = "подразделениеToolStripMenuItem";
             this.подразделениеToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.подразделениеToolStripMenuItem.Text = "Подразделение";
+            this.подразделениеToolStripMenuItem.Click += new System.EventHandler(this.подразделениеToolStripMenuItem_Click);
             // 
             // журналПроводокToolStripMenuItem
             // 
             this.журналПроводокToolStripMenuItem.Name = "журналПроводокToolStripMenuItem";
             this.журналПроводокToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
             this.журналПроводокToolStripMenuItem.Text = "Журнал проводок";
+            this.журналПроводокToolStripMenuItem.Click += new System.EventHandler(this.журналПроводокToolStripMenuItem_Click);
             // 
             // отчетToolStripMenuItem
             // 

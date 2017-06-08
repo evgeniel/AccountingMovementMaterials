@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.IO;
 
 namespace UchetPeremesheniaMaterialov
 {
@@ -15,7 +16,10 @@ namespace UchetPeremesheniaMaterialov
     {
         private SQLiteConnection con;
         private SQLiteCommand cmd;
-        private DataTable dt;
+        private DataTable dt = new DataTable();
+        private DataSet ds = new DataSet();
+        private string sPath = Path.Combine(Application.StartupPath, @"C:\Users\EvgenieL\Source\Repos\AccountingMovementMaterials\UchetPeremesheniaMaterialov\mybd.db");
+
 
         public PlanSchetov()
         {
@@ -24,20 +28,36 @@ namespace UchetPeremesheniaMaterialov
 
         private void PlanSchetov_Load(object sender, EventArgs e)
         {
-            con = new SQLiteConnection();
-            con.ConnectionString = @"Data Source=C:\Users\EvgenieL\Documents\Visual Studio 2013\Projects\UchetPeremesheniaMaterialov\UchetPeremesheniaMaterialov\mybd.db;New=False;Version=3";
+            string ConnectionString = @"Data Source=" + sPath + ";New=False;Version=3";
+            String selectCommand = "Select * from planSchetov";
 
-            cmd = new SQLiteCommand();
-            cmd.Connection = con;
+            selectTable(ConnectionString, selectCommand);
+            //con = new SQLiteConnection();
+            //con.ConnectionString = @"Data Source=C:\Users\EvgenieL\Source\Repos\AccountingMovementMaterials\UchetPeremesheniaMaterialov\mybd.db;New=False;Version=3";
 
-            dt = new DataTable();
-            dataGridView1.DataSource = dt; // связываешь DataTable и таблицу на форме
+            //cmd = new SQLiteCommand();
+            //cmd.Connection = con;
 
-            con.Open(); // открываешь соединение с БД
-            cmd.CommandText = "Select * from PlanSchetov";
-            dt.Clear();
-            dt.Load(cmd.ExecuteReader()); // выполняешь SQL-запрос
-            con.Close(); // закрываешь соединение с БД
+            //dt = new DataTable();
+            //dataGridView1.DataSource = dt; // связываешь DataTable и таблицу на форме
+
+            //con.Open(); // открываешь соединение с БД
+            //cmd.CommandText = "Select * from planSchetov";
+            //dt.Clear();
+            //dt.Load(cmd.ExecuteReader()); // выполняешь SQL-запрос
+            //con.Close(); // закрываешь соединение с БД
+        }
+
+        public void selectTable(string ConnectionString, String selectCommand)
+        {
+            SQLiteConnection connect = new SQLiteConnection(ConnectionString);
+            connect.Open();
+            SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(selectCommand, connect);
+            DataSet ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dataGridView1.DataSource = ds;
+            dataGridView1.DataMember = ds.Tables[0].ToString();
+            connect.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

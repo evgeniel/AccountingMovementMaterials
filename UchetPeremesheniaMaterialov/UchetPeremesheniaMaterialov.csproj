@@ -61,6 +61,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material.Designer.cs">
+      <DependentUpon>Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MOL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MOL.Designer.cs">
+      <DependentUpon>MOL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Podrazdelenie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Podrazdelenie.Designer.cs">
+      <DependentUpon>Podrazdelenie.cs</DependentUpon>
+    </Compile>
     <Compile Include="UchetMaterialov.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +93,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UPMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UPMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UPMDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UPMDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UPMDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UPMDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ZhurProv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhurProv.Designer.cs">
+      <DependentUpon>ZhurProv.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Material.resx">
+      <DependentUpon>Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MOL.resx">
+      <DependentUpon>MOL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Podrazdelenie.resx">
+      <DependentUpon>Podrazdelenie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UchetMaterialov.resx">
       <DependentUpon>UchetMaterialov.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +138,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ZhurProv.resx">
+      <DependentUpon>ZhurProv.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -100,6 +151,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="UPMDataSet.xsc">
+      <DependentUpon>UPMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UPMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UPMDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UPMDataSet.xss">
+      <DependentUpon>UPMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UPMDataSet1.xsc">
+      <DependentUpon>UPMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="UPMDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UPMDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UPMDataSet1.xss">
+      <DependentUpon>UPMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="UPMDataSet2.xsc">
+      <DependentUpon>UPMDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="UPMDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UPMDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UPMDataSet2.xss">
+      <DependentUpon>UPMDataSet2.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
