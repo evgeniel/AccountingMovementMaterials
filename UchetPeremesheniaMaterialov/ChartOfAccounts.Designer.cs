@@ -1,6 +1,6 @@
 ﻿namespace UchetPeremesheniaMaterialov
 {
-    partial class PlanSchetov
+    partial class ChartOfAccounts
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 16);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(553, 238);
+            this.dataGridView1.Size = new System.Drawing.Size(571, 108);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // PlanSchetov
+            // ChartOfAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 262);
+            this.ClientSize = new System.Drawing.Size(594, 137);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "PlanSchetov";
-            this.Text = "План счетов";
-            this.Load += new System.EventHandler(this.PlanSchetov_Load);
+            this.Name = "ChartOfAccounts";
+            this.Text = "ChartOfAccounts";
+            this.Load += new System.EventHandler(this.ChartOfAccounts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

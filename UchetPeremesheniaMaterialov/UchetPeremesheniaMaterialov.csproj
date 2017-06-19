@@ -61,11 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Material.cs">
+    <Compile Include="ChartOfAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Material.Designer.cs">
-      <DependentUpon>Material.cs</DependentUpon>
+    <Compile Include="ChartOfAccounts.Designer.cs">
+      <DependentUpon>ChartOfAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JournalEntries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JournalEntries.Designer.cs">
+      <DependentUpon>JournalEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials.Designer.cs">
+      <DependentUpon>Materials.cs</DependentUpon>
     </Compile>
     <Compile Include="MOL.cs">
       <SubType>Form</SubType>
@@ -73,23 +85,17 @@
     <Compile Include="MOL.Designer.cs">
       <DependentUpon>MOL.cs</DependentUpon>
     </Compile>
-    <Compile Include="Podrazdelenie.cs">
+    <Compile Include="Subdivision.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Podrazdelenie.Designer.cs">
-      <DependentUpon>Podrazdelenie.cs</DependentUpon>
+    <Compile Include="Subdivision.Designer.cs">
+      <DependentUpon>Subdivision.cs</DependentUpon>
     </Compile>
     <Compile Include="UchetMaterialov.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UchetMaterialov.Designer.cs">
       <DependentUpon>UchetMaterialov.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PlanSchetov.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PlanSchetov.Designer.cs">
-      <DependentUpon>PlanSchetov.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,26 +114,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UPMDataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ZhurProv.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZhurProv.Designer.cs">
-      <DependentUpon>ZhurProv.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Material.resx">
-      <DependentUpon>Material.cs</DependentUpon>
+    <EmbeddedResource Include="ChartOfAccounts.resx">
+      <DependentUpon>ChartOfAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JournalEntries.resx">
+      <DependentUpon>JournalEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials.resx">
+      <DependentUpon>Materials.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MOL.resx">
       <DependentUpon>MOL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Podrazdelenie.resx">
-      <DependentUpon>Podrazdelenie.cs</DependentUpon>
+    <EmbeddedResource Include="Subdivision.resx">
+      <DependentUpon>Subdivision.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UchetMaterialov.resx">
       <DependentUpon>UchetMaterialov.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PlanSchetov.resx">
-      <DependentUpon>PlanSchetov.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -138,9 +141,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ZhurProv.resx">
-      <DependentUpon>ZhurProv.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

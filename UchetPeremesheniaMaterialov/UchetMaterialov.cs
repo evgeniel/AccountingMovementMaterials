@@ -24,7 +24,7 @@ namespace UchetPeremesheniaMaterialov
 
         private void планСчетовToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PlanSchetov pS = new PlanSchetov();
+            ChartOfAccounts pS = new ChartOfAccounts();
             pS.Show();
         }
 
@@ -36,19 +36,19 @@ namespace UchetPeremesheniaMaterialov
 
         private void подразделениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Podrazdelenie pd = new Podrazdelenie();
+            Subdivision pd = new Subdivision();
             pd.Show();
         }
 
         private void мToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Material mm = new Material();
+            Materials mm = new Materials();
             mm.Show();
         }
 
         private void журналПроводокToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ZhurProv zp = new ZhurProv();
+            JournalEntries zp = new JournalEntries();
             zp.Show();
         }
     }

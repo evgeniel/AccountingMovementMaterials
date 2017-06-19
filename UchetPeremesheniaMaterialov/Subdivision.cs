@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace UchetPeremesheniaMaterialov
 {
-    public partial class MOL : Form
+    public partial class Subdivision : Form
     {
         private SQLiteConnection sql_con;
         private SQLiteCommand sql_cmd;
@@ -20,43 +20,24 @@ namespace UchetPeremesheniaMaterialov
         private DataTable DT = new DataTable();
         private string sPath = Path.Combine(Application.StartupPath, "mybd.db");
 
-        public MOL()
+        public Subdivision()
         {
             InitializeComponent();
-        }
-
-        private void MOL_Load(object sender, EventArgs e)
-        {
-            string ConnectionString = @"Data Source=" + sPath + ";New=False;Version=3";
-            String selectCommand = "Select * from MOL";
-            selectTable(ConnectionString, selectCommand);
-        }
-
-        public void selectTable(string ConnectionString, String selectCommand)
-        {
-            SQLiteConnection connect = new SQLiteConnection(ConnectionString);
-            connect.Open();
-            SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(selectCommand, connect);
-            DataSet ds = new DataSet();
-            dataAdapter.Fill(ds);
-            dataGridView1.DataSource = ds;
-            dataGridView1.DataMember = ds.Tables[0].ToString();
-            connect.Close();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             //Для правильной записи нового кода необходимо запросить максимальное значение idMOL из таблицы MOL
             string ConnectionString = @"Data Source=" + sPath + ";New=False;Version=3";
-            String selectCommand = "select MAX(idMOL) from MOL";
+            String selectCommand = "select MAX(idSubdivision) from Subdivision";
             object maxValue = selectValue(ConnectionString, selectCommand);
             if (Convert.ToString(maxValue) == "")
                 maxValue = 0;
             //вставка в таблицу MOL
-            string txtSQLQuery = "insert into MOL (idMOL, Name) values (" + (Convert.ToInt32(maxValue) + 1) + ", '" + toolStripTextBox1.Text + "')";
+            string txtSQLQuery = "insert into Subdivision (idSubdivision, Name) values (" + (Convert.ToInt32(maxValue) + 1) + ", '" + toolStripTextBox1.Text + "')";
             ExecuteQuery(txtSQLQuery);
             //обновление dataGridView1
-            selectCommand = "select * from MOL";
+            selectCommand = "select * from Subdivision";
             refreshForm(ConnectionString, selectCommand);
             toolStripTextBox1.Text = "";
         }
@@ -93,21 +74,6 @@ namespace UchetPeremesheniaMaterialov
             return value;
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
-        {
-            //выбрана строка CurrentRow
-            int CurrentRow = dataGridView1.SelectedCells[0].RowIndex;
-            //получить значение idMOL выбранной строки
-            string valueId = dataGridView1[0, CurrentRow].Value.ToString();
-            String selectCommand = "delete from MOL where idMOL=" + valueId;
-            string ConnectionString = @"Data Source=" + sPath + ";New=False;Version=3";
-            changeValue(ConnectionString, selectCommand);
-            //обновление dataGridView1
-            selectCommand = "select * from MOL";
-            refreshForm(ConnectionString, selectCommand);
-            toolStripTextBox1.Text = "";
-        }
-
         public void changeValue(string ConnectionString, String selectCommand)
         {
             SQLiteConnection connect = new
@@ -131,22 +97,47 @@ namespace UchetPeremesheniaMaterialov
             string valueId = dataGridView1[0, CurrentRow].Value.ToString();
             string changeName = toolStripTextBox1.Text;
             //обновление Name
-            String selectCommand = "update MOL set Name='" + changeName + "'where idMOL = " + valueId;
+            String selectCommand = "update Subdivision set Name='" + changeName + "'where idSubdivision = " + valueId;
             string ConnectionString = @"Data Source=" + sPath + ";New=False;Version=3";
             changeValue(ConnectionString, selectCommand);
             //обновление dataGridView1
-            selectCommand = "select * from MOL";
+            selectCommand = "select * from Subdivision";
             refreshForm(ConnectionString, selectCommand);
             toolStripTextBox1.Text = "";
         }
 
-        //private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        //{
-        //    //выбрана строка CurrentRow
-        //    int CurrentRow = dataGridView1.SelectedCells[0].RowIndex;
-        //    //получить значение Name выбранной строки
-        //    string nameId = dataGridView1[1, CurrentRow].Value.ToString();
-        //    toolStripTextBox1.Text = nameId;
-        //}
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            //выбрана строка CurrentRow
+            int CurrentRow = dataGridView1.SelectedCells[0].RowIndex;
+            //получить значение idMOL выбранной строки
+            string valueId = dataGridView1[0, CurrentRow].Value.ToString();
+            String selectCommand = "delete from Subdivision where idSubdivision=" + valueId;
+            string ConnectionString = @"Data Source=" + sPath + ";New=False;Version=3";
+            changeValue(ConnectionString, selectCommand);
+            //обновление dataGridView1
+            selectCommand = "select * from Subdivision";
+            refreshForm(ConnectionString, selectCommand);
+            toolStripTextBox1.Text = "";
+        }
+
+        private void Subdivision_Load(object sender, EventArgs e)
+        {
+            string ConnectionString = @"Data Source=" + sPath + ";New=False;Version=3";
+            String selectCommand = "Select * from Subdivision";
+            selectTable(ConnectionString, selectCommand);
+        }
+
+        public void selectTable(string ConnectionString, String selectCommand)
+        {
+            SQLiteConnection connect = new SQLiteConnection(ConnectionString);
+            connect.Open();
+            SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(selectCommand, connect);
+            DataSet ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dataGridView1.DataSource = ds;
+            dataGridView1.DataMember = ds.Tables[0].ToString();
+            connect.Close();
+        }
     }
 }
